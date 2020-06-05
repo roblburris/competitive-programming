@@ -1,12 +1,11 @@
+// UVa Problem 1124: Celebrity Jeopardy
+// Accepted: 6/5/2020
+// Runtime: 0s
+
 #include <iostream>
 #include <cstdio>
 #include <vector>
 using namespace std;
-
-/* 
-	UVa 1124: Celebrity Jeopardy
-	Solved: 6/5/2020
-*/
 
 int main() {
 	vector<char> equations;
