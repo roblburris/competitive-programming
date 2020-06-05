@@ -1,5 +1,6 @@
 // UVa Problem 00272: TeX Quotes
 // Accepted: 6/5/2020
+// Runtime: 0s
 
 #include <iostream>
 #include <vector>
