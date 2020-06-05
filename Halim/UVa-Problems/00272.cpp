@@ -1,12 +1,11 @@
+// UVa Problem 00272: TeX Quotes
+// Accepted: 6/5/2020
+
 #include <iostream>
 #include <vector>
 #include <cstdio>
 using namespace std;
 
-/*
-	UVa Problem 00272: TeX Quotes
-	Accepted 6/5/2020
-*/
 
 int main() {
 	vector<char> text;
