@@ -1,3 +1,7 @@
+// UVa Problem 10550: Combination Lock
+// Accepted: 6/6/2020
+// Runtime: 0s
+
 #include <iostream>
 #include <cstdio>
 #include <vector>
@@ -7,7 +11,7 @@ using namespace std;
 int main() {
 	vector < vector<int> > vals;
 	int sum = 0;
-	while (!cin.eof()) {
+	while (true) {
 		vector<int> temp;
 		for (unsigned int i = 0; i < 4; i++) {
 			int c;	
@@ -25,10 +29,13 @@ int main() {
 	}
 	
 	for (unsigned int i = 0; i < vals.size(); i++) {
-		float sumDeg = 1080;
-		sumDeg += abs(40 - abs(vals.at(i).at(1) - vals.at(i).at(0))) * 1.0 / 40 * 360; 
-		sumDeg += abs(40 - abs(vals.at(i).at(2) - vals.at(i).at(1))) * 1.0 / 40 * 360;
-		sumDeg += abs(40 - abs(vals.at(i).at(3) - vals.at(i).at(2))) * 1.0 / 40 * 360;
-		cout << sumDeg << "\n";
+		int sumDeg = 0;
+		int s1 = vals.at(i).at(0) - vals.at(i).at(1);
+		int s2 = vals.at(i).at(2) - vals.at(i).at(1);
+		int s3 = vals.at(i).at(2) - vals.at(i).at(3);
+		sumDeg += s1 >= 0 ? s1 * 9 : (40 + s1) * 9;
+		sumDeg += s2 >= 0 ? s2 * 9 : (40 + s2) * 9;
+		sumDeg += s3 >= 0 ? s3 * 9 : (40 + s3) * 9;
+		cout << sumDeg + 1080 << '\n';
 	}
 }	
