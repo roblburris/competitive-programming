@@ -29,6 +29,6 @@ int main() {
 		sumDeg += abs(40 - abs(vals.at(i).at(1) - vals.at(i).at(0))) * 1.0 / 40 * 360; 
 		sumDeg += abs(40 - abs(vals.at(i).at(2) - vals.at(i).at(1))) * 1.0 / 40 * 360;
 		sumDeg += abs(40 - abs(vals.at(i).at(3) - vals.at(i).at(2))) * 1.0 / 40 * 360;
-       	cout << sumDeg << "\n";
+		cout << sumDeg << "\n";
 	}
 }	
