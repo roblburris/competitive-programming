@@ -6,13 +6,11 @@ using namespace std;
 
 int main() {
 	vector < vector<int> > vals;
-	int sumDeg;
-	sumDeg = 1080;
 	int sum = 0;
 	while (!cin.eof()) {
 		vector<int> temp;
-		int c;
 		for (unsigned int i = 0; i < 4; i++) {
+			int c;	
 			cin >> c;
 			sum += c;
 			temp.push_back(c);
@@ -23,16 +21,14 @@ int main() {
 		}
 		
 		vals.push_back(temp);
+		sum = 0;
 	}
 	
 	for (unsigned int i = 0; i < vals.size(); i++) {
-		sumDeg = 1080;
-		sumDeg += ((40 - abs(vals.at(i).at(1) - vals.at(i).at(0))) / 40) * 360;
-        sumDeg += ((40 - abs(vals.at(i).at(2) - vals.at(i).at(1))) / 40) * 360;
-        sumDeg += ((40 - abs(vals.at(i).at(3) - vals.at(i).at(2))) / 40) * 360;
-		if (sumDeg != 1080) {
-        	cout << sumDeg << "\n";
-        }
-		sumDeg = 1080;
+		float sumDeg = 1080;
+		sumDeg += abs(40 - abs(vals.at(i).at(1) - vals.at(i).at(0))) * 1.0 / 40 * 360; 
+		sumDeg += abs(40 - abs(vals.at(i).at(2) - vals.at(i).at(1))) * 1.0 / 40 * 360;
+		sumDeg += abs(40 - abs(vals.at(i).at(3) - vals.at(i).at(2))) * 1.0 / 40 * 360;
+       	cout << sumDeg << "\n";
 	}
 }	
